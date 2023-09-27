@@ -1,0 +1,66 @@
+<?xml version="1.0" ?>
+<robot name="sun_tactile"
+    xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+    <xacro:include filename="$(find wsg32_description)/grippers/materials.xacro" />
+
+    <xacro:macro name="tactile_link" params="base_link_1:='' xyz_1:='0 0 0' rpy_1:='0 0 0' base_link_2:='' xyz_2:='0 0 0' rpy_2:='0 0 0'">
+        <xacro:unless value="${not base_link_1}">
+            <joint name="$tactile_1_joint_${base_link_1}" type="fixed">
+                <parent link="${base_link_1}"/>
+                <child link="tactile_1"/>
+                <origin rpy="${rpy_1}" xyz="${xyz_1}"/>
+            </joint>
+        </xacro:unless>
+
+        <xacro:unless value="${not base_link_2}">
+            <joint name="$tactile_2_joint_${base_link_2}" type="fixed">
+                <parent link="${base_link_2}"/>
+                <child link="tactile_2"/>
+                <origin rpy="${rpy_2}" xyz="${xyz_2}"/>
+            </joint>
+        </xacro:unless>
+
+    <link name="tactile_1">
+        <inertial>
+            <origin xyz="-0.0028157142675214186 -0.04814932465420843 -0.010573307928346813" rpy="0 0 0"/>
+            <mass value="0.4046663410557083"/>
+            <inertia ixx="0.000596" iyy="5.6e-05" izz="0.000573" ixy="-3e-05" iyz="-1e-06" ixz="-0.0"/>
+        </inertial>
+        <visual>
+            <origin xyz="-0.089799 0.142276 -0.044065" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="file://$(find fingers_description)/meshes/wsg50_REFILLS_v1_1.stl" scale="0.001 0.001 0.001"/>
+            </geometry>
+            <material name="black"/>
+        </visual>
+        <collision>
+            <origin xyz="-0.089799 0.142276 -0.044065" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="file://$(find fingers_description)/meshes/wsg50_REFILLS_v1_1.stl" scale="0.001 0.001 0.001"/>
+            </geometry>
+        </collision>
+    </link>
+
+    <link name="tactile_2">
+        <inertial>
+            <origin xyz="0.002830334344263878 -0.04812604253213226 -0.010675341666564392" rpy="0 0 0"/>
+            <mass value="0.4046663410557083"/>
+            <inertia ixx="0.000595" iyy="5.6e-05" izz="0.000573" ixy="3.5e-05" iyz="-2e-06" ixz="-0.0"/>
+        </inertial>
+        <visual>
+            <origin xyz="0.029804 0.142657 -0.047099" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="file://$(find fingers_description)/meshes/wsg50_REFILLS_v1_3.stl" scale="0.001 0.001 0.001"/>
+            </geometry>
+            <material name="black"/>
+        </visual>
+        <collision>
+            <origin xyz="0.029804 0.142657 -0.047099" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="file://$(find fingers_description)/meshes/wsg50_REFILLS_v1_3.stl" scale="0.001 0.001 0.001"/>
+            </geometry>
+        </collision>
+    </link>
+</xacro:macro>
+</robot>
