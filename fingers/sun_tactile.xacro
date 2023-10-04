@@ -4,6 +4,6 @@
 
   <link name="base"></link>
 
-  <xacro:include filename="$(find fingers_description)/fingers/sun_tactile.urdf"/>
+  <xacro:include filename="$(find fingers_description_ros2)/fingers/sun_tactile.urdf"/>
   <xacro:tactile_link base_link_1='base' xyz_1="0 0 0" rpy_1="0 0 0" base_link_2='base' xyz_2="0 0 0" rpy_2="0 0 0"/>
 </robot>
