@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<robot name="sun_tactile"
+<robot name="uclv_tactile"
     xmlns:xacro="http://www.ros.org/wiki/xacro">
 
     <xacro:include filename="$(find wsg32_description_ros2)/grippers/materials.xacro" />
@@ -30,14 +30,14 @@
         <visual>
             <origin xyz="0 0 0" rpy="0 0 0"/>
             <geometry>
-                <mesh filename="file://$(find sun_fingers_description_ros2)/meshes/finger_refills.stl" scale="0.001 0.001 0.001"/>
+                <mesh filename="file://$(find uclv_fingers_description_ros2)/meshes/finger_refills.stl" scale="0.001 0.001 0.001"/>
             </geometry>
             <material name="black"/>
         </visual>
         <collision>
             <origin xyz="0 0 0" rpy="0 0 0"/>
             <geometry>
-                <mesh filename="file://$(find sun_fingers_description_ros2)/meshes/finger_refills.stl" scale="0.001 0.001 0.001"/>
+                <mesh filename="file://$(find uclv_fingers_description_ros2)/meshes/finger_refills.stl" scale="0.001 0.001 0.001"/>
             </geometry>
         </collision>
     </link>
@@ -51,14 +51,14 @@
         <visual>
             <origin xyz="0 0 0" rpy="0 0 0"/>
             <geometry>
-                <mesh filename="file://$(find sun_fingers_description_ros2)/meshes/finger_refills.stl" scale="0.001 0.001 0.001"/>
+                <mesh filename="file://$(find uclv_fingers_description_ros2)/meshes/finger_refills.stl" scale="0.001 0.001 0.001"/>
             </geometry>
             <material name="black"/>
         </visual>
         <collision>
             <origin xyz="0 0 0" rpy="0 0 0"/>
             <geometry>
-                <mesh filename="file://$(find sun_fingers_description_ros2)/meshes/finger_refills.stl" scale="0.001 0.001 0.001"/>
+                <mesh filename="file://$(find uclv_fingers_description_ros2)/meshes/finger_refills.stl" scale="0.001 0.001 0.001"/>
             </geometry>
         </collision>
     </link>

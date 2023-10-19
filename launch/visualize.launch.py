@@ -8,12 +8,12 @@ from launch_ros.actions import Node
 
 
 def generate_launch_description():
-    xacro_file = os.path.join(get_package_share_directory('sun_fingers_description_ros2'), 'fingers',
-                                     'sun_tactile.xacro')
+    xacro_file = os.path.join(get_package_share_directory('uclv_fingers_description_ros2'), 'fingers',
+                                     'uclv_tactile.xacro')
     robot_description = Command(
         [FindExecutable(name='xacro'), ' ', xacro_file])
 
-    rviz_file = os.path.join(get_package_share_directory('sun_fingers_description_ros2'), 'rviz',
+    rviz_file = os.path.join(get_package_share_directory('uclv_fingers_description_ros2'), 'rviz',
                              'visualize_tactile.rviz')
 
     return LaunchDescription([   
