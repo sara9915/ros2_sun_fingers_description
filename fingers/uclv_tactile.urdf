@@ -2,7 +2,7 @@
 <robot name="uclv_tactile"
     xmlns:xacro="http://www.ros.org/wiki/xacro">
 
-    <xacro:include filename="$(find wsg32_description_ros2)/grippers/materials.xacro" />
+    <!-- <xacro:include filename="$(find wsg32_description_ros2)/grippers/materials.xacro" /> -->
 
     <xacro:macro name="tactile_link" params="base_link_1:='' xyz_1:='0 0 0' rpy_1:='0 0 0' base_link_2:='' xyz_2:='0 0 0' rpy_2:='0 0 0'">
         <xacro:unless value="${not base_link_1}">
